@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 class PersonViewController : UIViewController
 {
     
@@ -32,7 +33,10 @@ class PersonViewController : UIViewController
     
     @IBAction func loginButtonTouched(_ sender: Any) {
         
-        
+        let storyboard = UIStoryboard(name: "LogIn", bundle: nil)
+        let logInVC = storyboard.instantiateViewController(withIdentifier: "LogInViewController")
+        logInVC.modalTransitionStyle = .coverVertical
+        self.present(logInVC, animated: true, completion: nil)
         
     }
 
@@ -41,6 +45,7 @@ class PersonViewController : UIViewController
 
 extension PersonViewController : UITableViewDelegate
 {
+    
     
 }
 
