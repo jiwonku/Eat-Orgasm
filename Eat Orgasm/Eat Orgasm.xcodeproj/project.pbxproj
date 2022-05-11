@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		8E751F65281D6D74007EE6F3 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E751F64281D6D74007EE6F3 /* PersonTableViewCell.xib */; };
 		8E751F6A281D6E79007EE6F3 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F69281D6E79007EE6F3 /* PersonViewController.swift */; };
 		8E751F6F281D70F0007EE6F3 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F6E281D70F0007EE6F3 /* PersonTableViewCell.swift */; };
+		A68DB0D5282B42B700A3153F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A68DB0D4282B42B600A3153F /* GoogleService-Info.plist */; };
 		DB435FB81A5FBD3AE0A534D3 /* Pods_Eat_Orgasm_Eat_OrgasmUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13ACBB17BCCC1BCF52061117 /* Pods_Eat_Orgasm_Eat_OrgasmUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		8E751F64281D6D74007EE6F3 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		8E751F69281D6E79007EE6F3 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		8E751F6E281D70F0007EE6F3 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		A68DB0D4282B42B600A3153F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B1DE5441EF478824E70F042B /* Pods-Eat Orgasm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat Orgasm.debug.xcconfig"; path = "Target Support Files/Pods-Eat Orgasm/Pods-Eat Orgasm.debug.xcconfig"; sourceTree = "<group>"; };
 		BF7348B03724C74CBAF2945F /* Pods-Eat Orgasm-Eat OrgasmUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat Orgasm-Eat OrgasmUITests.debug.xcconfig"; path = "Target Support Files/Pods-Eat Orgasm-Eat OrgasmUITests/Pods-Eat Orgasm-Eat OrgasmUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +109,6 @@
 				4E90EFEC1AD20BF149C9DBD8 /* Pods-Eat OrgasmTests.debug.xcconfig */,
 				721ACCCAC866F43EDEC71BA8 /* Pods-Eat OrgasmTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -146,6 +147,7 @@
 		8E751F30281D6466007EE6F3 /* Eat Orgasm */ = {
 			isa = PBXGroup;
 			children = (
+				A68DB0D4282B42B600A3153F /* GoogleService-Info.plist */,
 				8E751F31281D6466007EE6F3 /* AppDelegate.swift */,
 				8E751F33281D6466007EE6F3 /* SceneDelegate.swift */,
 				8E751F35281D6466007EE6F3 /* ViewController.swift */,
@@ -288,6 +290,7 @@
 			files = (
 				8E751F3E281D646C007EE6F3 /* LaunchScreen.storyboard in Resources */,
 				8E751F3B281D646C007EE6F3 /* Assets.xcassets in Resources */,
+				A68DB0D5282B42B700A3153F /* GoogleService-Info.plist in Resources */,
 				8E751F65281D6D74007EE6F3 /* PersonTableViewCell.xib in Resources */,
 				8E751F39281D6466007EE6F3 /* Main.storyboard in Resources */,
 			);
