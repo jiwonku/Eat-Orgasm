@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58CCD2EA0C44196FC7571B82 /* Pods_Eat_OrgasmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805EC304DC0615DD8AF19042 /* Pods_Eat_OrgasmTests.framework */; };
+		7FD30988628B446CB1D38323 /* Pods_Eat_Orgasm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D6668C1818A1EB15FCC17B /* Pods_Eat_Orgasm.framework */; };
 		8E751F32281D6466007EE6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F31281D6466007EE6F3 /* AppDelegate.swift */; };
 		8E751F34281D6466007EE6F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F33281D6466007EE6F3 /* SceneDelegate.swift */; };
 		8E751F36281D6466007EE6F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F35281D6466007EE6F3 /* ViewController.swift */; };
@@ -18,6 +20,7 @@
 		8E751F65281D6D74007EE6F3 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E751F64281D6D74007EE6F3 /* PersonTableViewCell.xib */; };
 		8E751F6A281D6E79007EE6F3 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F69281D6E79007EE6F3 /* PersonViewController.swift */; };
 		8E751F6F281D70F0007EE6F3 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F6E281D70F0007EE6F3 /* PersonTableViewCell.swift */; };
+		DB435FB81A5FBD3AE0A534D3 /* Pods_Eat_Orgasm_Eat_OrgasmUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13ACBB17BCCC1BCF52061117 /* Pods_Eat_Orgasm_Eat_OrgasmUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08D6668C1818A1EB15FCC17B /* Pods_Eat_Orgasm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eat_Orgasm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13ACBB17BCCC1BCF52061117 /* Pods_Eat_Orgasm_Eat_OrgasmUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eat_Orgasm_Eat_OrgasmUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21C137C9E0E5B184BC01FC8D /* Pods-Eat Orgasm-Eat OrgasmUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat Orgasm-Eat OrgasmUITests.release.xcconfig"; path = "Target Support Files/Pods-Eat Orgasm-Eat OrgasmUITests/Pods-Eat Orgasm-Eat OrgasmUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4E90EFEC1AD20BF149C9DBD8 /* Pods-Eat OrgasmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat OrgasmTests.debug.xcconfig"; path = "Target Support Files/Pods-Eat OrgasmTests/Pods-Eat OrgasmTests.debug.xcconfig"; sourceTree = "<group>"; };
+		573F282ECD9687E2D817BC9B /* Pods-Eat Orgasm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat Orgasm.release.xcconfig"; path = "Target Support Files/Pods-Eat Orgasm/Pods-Eat Orgasm.release.xcconfig"; sourceTree = "<group>"; };
+		721ACCCAC866F43EDEC71BA8 /* Pods-Eat OrgasmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat OrgasmTests.release.xcconfig"; path = "Target Support Files/Pods-Eat OrgasmTests/Pods-Eat OrgasmTests.release.xcconfig"; sourceTree = "<group>"; };
+		805EC304DC0615DD8AF19042 /* Pods_Eat_OrgasmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eat_OrgasmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E751F2E281D6466007EE6F3 /* Eat Orgasm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eat Orgasm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E751F31281D6466007EE6F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E751F33281D6466007EE6F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +65,8 @@
 		8E751F64281D6D74007EE6F3 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		8E751F69281D6E79007EE6F3 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		8E751F6E281D70F0007EE6F3 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		B1DE5441EF478824E70F042B /* Pods-Eat Orgasm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat Orgasm.debug.xcconfig"; path = "Target Support Files/Pods-Eat Orgasm/Pods-Eat Orgasm.debug.xcconfig"; sourceTree = "<group>"; };
+		BF7348B03724C74CBAF2945F /* Pods-Eat Orgasm-Eat OrgasmUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat Orgasm-Eat OrgasmUITests.debug.xcconfig"; path = "Target Support Files/Pods-Eat Orgasm-Eat OrgasmUITests/Pods-Eat Orgasm-Eat OrgasmUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FD30988628B446CB1D38323 /* Pods_Eat_Orgasm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58CCD2EA0C44196FC7571B82 /* Pods_Eat_OrgasmTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +90,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB435FB81A5FBD3AE0A534D3 /* Pods_Eat_Orgasm_Eat_OrgasmUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39FB162B51F4E16C598E77C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1DE5441EF478824E70F042B /* Pods-Eat Orgasm.debug.xcconfig */,
+				573F282ECD9687E2D817BC9B /* Pods-Eat Orgasm.release.xcconfig */,
+				BF7348B03724C74CBAF2945F /* Pods-Eat Orgasm-Eat OrgasmUITests.debug.xcconfig */,
+				21C137C9E0E5B184BC01FC8D /* Pods-Eat Orgasm-Eat OrgasmUITests.release.xcconfig */,
+				4E90EFEC1AD20BF149C9DBD8 /* Pods-Eat OrgasmTests.debug.xcconfig */,
+				721ACCCAC866F43EDEC71BA8 /* Pods-Eat OrgasmTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5821685E76418F3E917F229B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08D6668C1818A1EB15FCC17B /* Pods_Eat_Orgasm.framework */,
+				13ACBB17BCCC1BCF52061117 /* Pods_Eat_Orgasm_Eat_OrgasmUITests.framework */,
+				805EC304DC0615DD8AF19042 /* Pods_Eat_OrgasmTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E751F25281D6466007EE6F3 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +128,8 @@
 				8E751F47281D646C007EE6F3 /* Eat OrgasmTests */,
 				8E751F52281D646C007EE6F3 /* Eat OrgasmUITests */,
 				8E751F2F281D6466007EE6F3 /* Products */,
+				39FB162B51F4E16C598E77C0 /* Pods */,
+				5821685E76418F3E917F229B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E751F58281D646C007EE6F3 /* Build configuration list for PBXNativeTarget "Eat Orgasm" */;
 			buildPhases = (
+				E13A405920580F7075E23CF8 /* [CP] Check Pods Manifest.lock */,
 				8E751F2A281D6466007EE6F3 /* Sources */,
 				8E751F2B281D6466007EE6F3 /* Frameworks */,
 				8E751F2C281D6466007EE6F3 /* Resources */,
+				2FF59772C63BD62B4E39A603 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E751F5B281D646C007EE6F3 /* Build configuration list for PBXNativeTarget "Eat OrgasmTests" */;
 			buildPhases = (
+				87DA63E2EB8486A72327C43D /* [CP] Check Pods Manifest.lock */,
 				8E751F40281D646C007EE6F3 /* Sources */,
 				8E751F41281D646C007EE6F3 /* Frameworks */,
 				8E751F42281D646C007EE6F3 /* Resources */,
@@ -179,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E751F5E281D646C007EE6F3 /* Build configuration list for PBXNativeTarget "Eat OrgasmUITests" */;
 			buildPhases = (
+				2E2C4855404998797ACD2BA6 /* [CP] Check Pods Manifest.lock */,
 				8E751F4B281D646C007EE6F3 /* Sources */,
 				8E751F4C281D646C007EE6F3 /* Frameworks */,
 				8E751F4D281D646C007EE6F3 /* Resources */,
+				768380DD2A90D3904D901EAC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +308,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E2C4855404998797ACD2BA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eat Orgasm-Eat OrgasmUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FF59772C63BD62B4E39A603 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eat Orgasm/Pods-Eat Orgasm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eat Orgasm/Pods-Eat Orgasm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eat Orgasm/Pods-Eat Orgasm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		768380DD2A90D3904D901EAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eat Orgasm-Eat OrgasmUITests/Pods-Eat Orgasm-Eat OrgasmUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eat Orgasm-Eat OrgasmUITests/Pods-Eat Orgasm-Eat OrgasmUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eat Orgasm-Eat OrgasmUITests/Pods-Eat Orgasm-Eat OrgasmUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87DA63E2EB8486A72327C43D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eat OrgasmTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E13A405920580F7075E23CF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eat Orgasm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E751F2A281D6466007EE6F3 /* Sources */ = {
@@ -445,6 +594,7 @@
 		};
 		8E751F59281D646C007EE6F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1DE5441EF478824E70F042B /* Pods-Eat Orgasm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,6 +614,7 @@
 		};
 		8E751F5A281D646C007EE6F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 573F282ECD9687E2D817BC9B /* Pods-Eat Orgasm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -483,6 +634,7 @@
 		};
 		8E751F5C281D646C007EE6F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E90EFEC1AD20BF149C9DBD8 /* Pods-Eat OrgasmTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +657,7 @@
 		};
 		8E751F5D281D646C007EE6F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 721ACCCAC866F43EDEC71BA8 /* Pods-Eat OrgasmTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,6 +680,7 @@
 		};
 		8E751F5F281D646C007EE6F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF7348B03724C74CBAF2945F /* Pods-Eat Orgasm-Eat OrgasmUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -547,6 +701,7 @@
 		};
 		8E751F60281D646C007EE6F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C137C9E0E5B184BC01FC8D /* Pods-Eat Orgasm-Eat OrgasmUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

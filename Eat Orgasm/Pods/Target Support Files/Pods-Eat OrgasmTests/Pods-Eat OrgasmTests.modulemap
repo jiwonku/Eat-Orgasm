@@ -1,0 +1,6 @@
+framework module Pods_Eat_OrgasmTests {
+  umbrella header "Pods-Eat OrgasmTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
