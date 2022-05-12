@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		58CCD2EA0C44196FC7571B82 /* Pods_Eat_OrgasmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805EC304DC0615DD8AF19042 /* Pods_Eat_OrgasmTests.framework */; };
 		7FD30988628B446CB1D38323 /* Pods_Eat_Orgasm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D6668C1818A1EB15FCC17B /* Pods_Eat_Orgasm.framework */; };
+		8E18C0AE282D381400800BEB /* CRegisterAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18C0AD282D381400800BEB /* CRegisterAccountViewController.swift */; };
 		8E751F32281D6466007EE6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F31281D6466007EE6F3 /* AppDelegate.swift */; };
 		8E751F34281D6466007EE6F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F33281D6466007EE6F3 /* SceneDelegate.swift */; };
 		8E751F36281D6466007EE6F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F35281D6466007EE6F3 /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 		573F282ECD9687E2D817BC9B /* Pods-Eat Orgasm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat Orgasm.release.xcconfig"; path = "Target Support Files/Pods-Eat Orgasm/Pods-Eat Orgasm.release.xcconfig"; sourceTree = "<group>"; };
 		721ACCCAC866F43EDEC71BA8 /* Pods-Eat OrgasmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat OrgasmTests.release.xcconfig"; path = "Target Support Files/Pods-Eat OrgasmTests/Pods-Eat OrgasmTests.release.xcconfig"; sourceTree = "<group>"; };
 		805EC304DC0615DD8AF19042 /* Pods_Eat_OrgasmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eat_OrgasmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E18C0AD282D381400800BEB /* CRegisterAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRegisterAccountViewController.swift; sourceTree = "<group>"; };
 		8E751F2E281D6466007EE6F3 /* Eat Orgasm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eat Orgasm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E751F31281D6466007EE6F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E751F33281D6466007EE6F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				8EDF33C0282BDE96009F0904 /* LogInViewController.swift */,
 				8E751F69281D6E79007EE6F3 /* PersonViewController.swift */,
 				8E751F6E281D70F0007EE6F3 /* PersonTableViewCell.swift */,
+				8E18C0AD282D381400800BEB /* CRegisterAccountViewController.swift */,
 				8E751F3A281D646C007EE6F3 /* Assets.xcassets */,
 				8E751F3F281D646C007EE6F3 /* Info.plist */,
 			);
@@ -441,6 +444,7 @@
 				8E751F34281D6466007EE6F3 /* SceneDelegate.swift in Sources */,
 				8E751F6F281D70F0007EE6F3 /* PersonTableViewCell.swift in Sources */,
 				8E751F6A281D6E79007EE6F3 /* PersonViewController.swift in Sources */,
+				8E18C0AE282D381400800BEB /* CRegisterAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

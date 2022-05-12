@@ -33,13 +33,18 @@ class PersonViewController : UIViewController
     
     @IBAction func loginButtonTouched(_ sender: Any) {
         
-        let storyboard = UIStoryboard(name: "LogIn", bundle: nil)
-        let logInVC = storyboard.instantiateViewController(withIdentifier: "LogInViewController")
-        logInVC.modalTransitionStyle = .coverVertical
-        self.present(logInVC, animated: true, completion: nil)
+//        let storyboard = UIStoryboard(name: "LogIn", bundle: nil)
+//        let logInVC = storyboard.instantiateViewController(withIdentifier: "LogInViewController")
+//        logInVC.modalTransitionStyle = .coverVertical
+//        logInVC.modalPresentationStyle = .fullScreen
+//        self.present(logInVC, animated: true, completion: nil)
         
+        let storyboard = UIStoryboard(name: "LogIn", bundle: nil)
+        let pushVC = storyboard.instantiateViewController(withIdentifier: "LogInViewController")
+        let navVC = UINavigationController(rootViewController:pushVC)
+        navVC.modalPresentationStyle = .overFullScreen
+        self.present(navVC, animated: true, completion:nil)
     }
-
 }
 
 
