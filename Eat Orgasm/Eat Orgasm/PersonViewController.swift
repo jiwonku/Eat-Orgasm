@@ -11,11 +11,9 @@ import UIKit
 
 class PersonViewController : UIViewController
 {
-    
-    
-    
     @IBOutlet var personTableView: UITableView!
     
+    static let shared = PersonViewController()
     
     override func viewDidLoad() {
         super .viewDidLoad()
@@ -25,22 +23,37 @@ class PersonViewController : UIViewController
                 
         let personTableViewCell = UINib(nibName: "PersonTableViewCell", bundle: nil)
         self.personTableView.register(personTableViewCell, forCellReuseIdentifier: "PersonTableViewCell")
+        
+        registerAuthStateDidChangeEvent()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+
+    private func registerAuthStateDidChangeEvent() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(checkLoginIn),
+                                               name: .authStateDidChange,
+                                               object: nil)
+    }
     
-    
-    
+    @objc private func checkLoginIn() {
+        let isSignIn = UserDefaults.standard.bool(forKey: "isSignIn") == true
+        if isSignIn {
+//            setHome()
+        } else {
+            routeToLogin()
+        }
+    }
     
     @IBAction func loginButtonTouched(_ sender: Any) {
-        
-//        let storyboard = UIStoryboard(name: "LogIn", bundle: nil)
-//        let logInVC = storyboard.instantiateViewController(withIdentifier: "LogInViewController")
-//        logInVC.modalTransitionStyle = .coverVertical
-//        logInVC.modalPresentationStyle = .fullScreen
-//        self.present(logInVC, animated: true, completion: nil)
-        
+        routeToLogin()
+    }
+    
+    private func routeToLogin() {
         let storyboard = UIStoryboard(name: "LogIn", bundle: nil)
-        let pushVC = storyboard.instantiateViewController(withIdentifier: "LogInViewController")
+        let pushVC = storyboard.instantiateViewController(withIdentifier: "CLogInViewController")
         let navVC = UINavigationController(rootViewController:pushVC)
         navVC.modalPresentationStyle = .overFullScreen
         self.present(navVC, animated: true, completion:nil)
@@ -57,10 +70,6 @@ extension PersonViewController : UITableViewDelegate
 
 extension PersonViewController : UITableViewDataSource
 {
-    
-    
-    
-    
     
     // MARK: UITableViewDataSource delegate
     

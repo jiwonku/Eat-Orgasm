@@ -11,7 +11,7 @@
         <!--Log In View Controller-->
         <scene sceneID="8Ny-7p-76q">
             <objects>
-                <viewController storyboardIdentifier="LogInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Es-pR-GDG" customClass="LogInViewController" customModule="Eat_Orgasm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CLogInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Es-pR-GDG" customClass="CLogInViewController" customModule="Eat_Orgasm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aEO-rh-qy2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ziT-cV-q1x">
-                                <rect key="frame" x="145" y="423" width="219" height="34"/>
+                                <rect key="frame" x="145" y="278" width="219" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -33,13 +33,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PassWord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRI-89-Sbq">
-                                <rect key="frame" x="40" y="429.5" width="76" height="21"/>
+                                <rect key="frame" x="40" y="284.5" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWd-Uj-Czt">
-                                <rect key="frame" x="184.5" y="657" width="45" height="45"/>
+                                <rect key="frame" x="184.5" y="512" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="MXM-6I-Egw"/>
                                     <constraint firstAttribute="width" constant="45" id="VGD-DD-SIl"/>
@@ -50,12 +50,39 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI2-Nb-2jc">
-                                <rect key="frame" x="178.5" y="752" width="57" height="30"/>
+                                <rect key="frame" x="178.5" y="582" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="registerButtonTouched:" destination="2Es-pR-GDG" eventType="touchUpInside" id="Quv-4z-x8s"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" customClass="GIDSignInButton" translatesAutoresizingMaskIntoConstraints="NO" id="gQZ-W1-bg9">
+                                <rect key="frame" x="161.5" y="727" width="91" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="TJ6-Gg-6M0"/>
+                                    <constraint firstAttribute="height" constant="30" id="wtU-LQ-y2j"/>
+                                </constraints>
+                                <state key="normal" title="Google Login"/>
+                                <connections>
+                                    <action selector="googleLoginButtonTouched:" destination="2Es-pR-GDG" eventType="touchUpInside" id="7Hz-65-fYc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POw-yU-oYt">
+                                <rect key="frame" x="181.5" y="782" width="51" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="BKW-av-nl2"/>
+                                    <constraint firstAttribute="height" constant="30" id="jLt-bX-EaF"/>
+                                </constraints>
+                                <state key="normal" title="LogOut"/>
+                                <connections>
+                                    <action selector="logOutButtonTouched:" destination="2Es-pR-GDG" eventType="touchUpInside" id="tdH-B4-cSf"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1l-Tz-zcJ">
+                                <rect key="frame" x="133" y="657" width="149" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IIR-BR-qiu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -67,17 +94,22 @@
                             <constraint firstItem="EVb-xv-ZWW" firstAttribute="leading" secondItem="f0z-Nf-znS" secondAttribute="trailing" constant="88" id="Caa-iG-hJH"/>
                             <constraint firstItem="yWd-Uj-Czt" firstAttribute="top" secondItem="ziT-cV-q1x" secondAttribute="bottom" constant="200" id="Dkk-Dg-LqV"/>
                             <constraint firstItem="aRI-89-Sbq" firstAttribute="centerY" secondItem="ziT-cV-q1x" secondAttribute="centerY" id="Lpc-Lq-oZm"/>
+                            <constraint firstItem="IIR-BR-qiu" firstAttribute="bottom" secondItem="POw-yU-oYt" secondAttribute="bottom" constant="50" id="MWv-Nz-oOE"/>
+                            <constraint firstItem="POw-yU-oYt" firstAttribute="top" secondItem="gQZ-W1-bg9" secondAttribute="bottom" constant="25" id="Xiz-ur-JtN"/>
                             <constraint firstItem="IIR-BR-qiu" firstAttribute="trailing" secondItem="EVb-xv-ZWW" secondAttribute="trailing" constant="50" id="Xvu-e8-W8e"/>
                             <constraint firstItem="ziT-cV-q1x" firstAttribute="trailing" secondItem="EVb-xv-ZWW" secondAttribute="trailing" id="Z5f-L1-fNP"/>
                             <constraint firstItem="ziT-cV-q1x" firstAttribute="leading" secondItem="EVb-xv-ZWW" secondAttribute="leading" id="aME-Ri-RSy"/>
                             <constraint firstItem="f0z-Nf-znS" firstAttribute="leading" secondItem="IIR-BR-qiu" secondAttribute="leading" constant="40" id="bWr-Nn-gUT"/>
                             <constraint firstItem="aRI-89-Sbq" firstAttribute="leading" secondItem="f0z-Nf-znS" secondAttribute="leading" id="cxc-BG-D3p"/>
-                            <constraint firstItem="GI2-Nb-2jc" firstAttribute="top" secondItem="yWd-Uj-Czt" secondAttribute="bottom" constant="50" id="dX1-hp-AfE"/>
-                            <constraint firstItem="IIR-BR-qiu" firstAttribute="bottom" secondItem="GI2-Nb-2jc" secondAttribute="bottom" constant="80" id="n6l-iu-Wrc"/>
+                            <constraint firstItem="GI2-Nb-2jc" firstAttribute="top" secondItem="yWd-Uj-Czt" secondAttribute="bottom" constant="25" id="dX1-hp-AfE"/>
+                            <constraint firstItem="POw-yU-oYt" firstAttribute="centerX" secondItem="aEO-rh-qy2" secondAttribute="centerX" id="dko-Yc-ZYr"/>
+                            <constraint firstItem="IIR-BR-qiu" firstAttribute="bottom" secondItem="GI2-Nb-2jc" secondAttribute="bottom" constant="250" id="n6l-iu-Wrc"/>
+                            <constraint firstItem="gQZ-W1-bg9" firstAttribute="centerX" secondItem="aEO-rh-qy2" secondAttribute="centerX" id="rh8-yh-ejs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e2a-bD-OtG"/>
                     <connections>
+                        <outlet property="googleLogin" destination="gQZ-W1-bg9" id="9HG-p7-ftb"/>
                         <outlet property="idInputTextField" destination="EVb-xv-ZWW" id="t38-qM-IMA"/>
                         <outlet property="pwInputTextField" destination="ziT-cV-q1x" id="tKk-Fx-Lid"/>
                     </connections>
