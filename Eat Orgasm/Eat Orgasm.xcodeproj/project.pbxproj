@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		58CCD2EA0C44196FC7571B82 /* Pods_Eat_OrgasmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805EC304DC0615DD8AF19042 /* Pods_Eat_OrgasmTests.framework */; };
 		7FD30988628B446CB1D38323 /* Pods_Eat_Orgasm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D6668C1818A1EB15FCC17B /* Pods_Eat_Orgasm.framework */; };
+		8E06759E283E64B60027F5AC /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E06759D283E64B60027F5AC /* FirebaseStorageManager.swift */; };
 		8E18C0AE282D381400800BEB /* CRegisterAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18C0AD282D381400800BEB /* CRegisterAccountViewController.swift */; };
 		8E622461283676840036ED43 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E622460283676840036ED43 /* Notification.swift */; };
 		8E751F32281D6466007EE6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F31281D6466007EE6F3 /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 		573F282ECD9687E2D817BC9B /* Pods-Eat Orgasm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat Orgasm.release.xcconfig"; path = "Target Support Files/Pods-Eat Orgasm/Pods-Eat Orgasm.release.xcconfig"; sourceTree = "<group>"; };
 		721ACCCAC866F43EDEC71BA8 /* Pods-Eat OrgasmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat OrgasmTests.release.xcconfig"; path = "Target Support Files/Pods-Eat OrgasmTests/Pods-Eat OrgasmTests.release.xcconfig"; sourceTree = "<group>"; };
 		805EC304DC0615DD8AF19042 /* Pods_Eat_OrgasmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eat_OrgasmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E06759D283E64B60027F5AC /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
 		8E18C0AD282D381400800BEB /* CRegisterAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRegisterAccountViewController.swift; sourceTree = "<group>"; };
 		8E622460283676840036ED43 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		8E751F2E281D6466007EE6F3 /* Eat Orgasm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eat Orgasm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E06759C283E64950027F5AC /* FirebaseStorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				8E06759D283E64B60027F5AC /* FirebaseStorageManager.swift */,
+			);
+			path = FirebaseStorageManager;
+			sourceTree = "<group>";
+		};
 		8E62245F283676680036ED43 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 		8E751F30281D6466007EE6F3 /* Eat Orgasm */ = {
 			isa = PBXGroup;
 			children = (
+				8E06759C283E64950027F5AC /* FirebaseStorageManager */,
 				8E62245F283676680036ED43 /* Extension */,
 				8EDF33A7282BDB15009F0904 /* StoryBoard */,
 				A68DB0D4282B42B600A3153F /* GoogleService-Info.plist */,
@@ -453,6 +464,7 @@
 				8E751F32281D6466007EE6F3 /* AppDelegate.swift in Sources */,
 				8EDF33C1282BDE96009F0904 /* CLogInViewController.swift in Sources */,
 				8E751F34281D6466007EE6F3 /* SceneDelegate.swift in Sources */,
+				8E06759E283E64B60027F5AC /* FirebaseStorageManager.swift in Sources */,
 				8E622461283676840036ED43 /* Notification.swift in Sources */,
 				8E751F6F281D70F0007EE6F3 /* PersonTableViewCell.swift in Sources */,
 				8E751F6A281D6E79007EE6F3 /* PersonViewController.swift in Sources */,

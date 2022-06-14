@@ -56,7 +56,7 @@
                                     <action selector="registerButtonTouched:" destination="2Es-pR-GDG" eventType="touchUpInside" id="Quv-4z-x8s"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" customClass="GIDSignInButton" translatesAutoresizingMaskIntoConstraints="NO" id="gQZ-W1-bg9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQZ-W1-bg9" customClass="GIDSignInButton">
                                 <rect key="frame" x="161.5" y="727" width="91" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="91" id="TJ6-Gg-6M0"/>
@@ -67,13 +67,12 @@
                                     <action selector="googleLoginButtonTouched:" destination="2Es-pR-GDG" eventType="touchUpInside" id="7Hz-65-fYc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POw-yU-oYt">
-                                <rect key="frame" x="181.5" y="782" width="51" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POw-yU-oYt" userLabel="Personal Information">
+                                <rect key="frame" x="136" y="782" width="142" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="51" id="BKW-av-nl2"/>
                                     <constraint firstAttribute="height" constant="30" id="jLt-bX-EaF"/>
                                 </constraints>
-                                <state key="normal" title="LogOut"/>
+                                <state key="normal" title="Personal Information"/>
                                 <connections>
                                     <action selector="logOutButtonTouched:" destination="2Es-pR-GDG" eventType="touchUpInside" id="tdH-B4-cSf"/>
                                 </connections>
@@ -111,6 +110,7 @@
                     <connections>
                         <outlet property="googleLogin" destination="gQZ-W1-bg9" id="9HG-p7-ftb"/>
                         <outlet property="idInputTextField" destination="EVb-xv-ZWW" id="t38-qM-IMA"/>
+                        <outlet property="personalInformaion" destination="POw-yU-oYt" id="yo5-g3-5pa"/>
                         <outlet property="pwInputTextField" destination="ziT-cV-q1x" id="tKk-Fx-Lid"/>
                     </connections>
                 </viewController>

@@ -9,9 +9,10 @@ target 'Eat Orgasm' do
   pod 'Firebase/Auth'
   pod 'FirebaseAuth'
   pod 'GoogleSignIn'
-  pod 'FirebaseStorage'
-  pod 'FirebaseFirestore'
-
+  pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseUI/Storage'
+  pod 'FirebaseFirestoreSwift', '> 7.0-beta'
 
 
   # Pods for Eat Orgasm
