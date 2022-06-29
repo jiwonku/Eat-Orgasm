@@ -14,60 +14,107 @@ import FirebaseUI
 import FirebaseFirestoreSwift
 
 
-
 class PersonViewController : UIViewController
 {
-//    @IBOutlet var personTableView: UITableView!
-    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var googleLogin: GIDSignInButton!
+    @IBOutlet weak var googleLogout: UIButton!
     
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var ageTextField: UITextField!
-    @IBOutlet weak var updateButton: UIButton!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userEmailLabel: UILabel!
+    @IBOutlet weak var userInformationView: UIView!
     
     var isLogged : Bool?
-    
-    private lazy var imagePicker: UIImagePickerController = {
-            let picker = UIImagePickerController()
-            picker.delegate = self
-            return picker
-        }()
-    
-//    static let shared = PersonViewController()
-    
+    var db : Firestore!
+    let user = Auth.auth().currentUser
+
     override func viewDidLoad() {
         super .viewDidLoad()
+
+        self.isLogged = false;
+        db = Firestore.firestore()
         
-//        personTableView.delegate = self
-//        personTableView.dataSource = self
-//
-//        let personTableViewCell = UINib(nibName: "PersonTableViewCell", bundle: nil)
-//        self.personTableView.register(personTableViewCell, forCellReuseIdentifier: "PersonTableViewCell")
+        self.googleLogout.isHidden = true
         
         registerAuthStateDidChangeEvent()
         
-        self.isLogged = false;
-        
-        self.nameTextField.isEnabled = false
-        self.emailTextField.isEnabled = false
-        self.ageTextField.isEnabled = false
-        self.updateButton.isEnabled = false
-        
-        
-        //어떤 버튼 눌렸는지 구분하기 위함
-        profileImage.tag = 1004
         //클릭 가능하도록 설정
-        self.profileImage.isUserInteractionEnabled = true
+        self.userInformationView.isUserInteractionEnabled = true
         //제쳐스 추가
-        self.profileImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.viewTapped)))
-        
+        self.userInformationView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.viewTapped)))
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
     }
+    
+    @objc func viewTapped(_ sender: UITapGestureRecognizer) {
+        
+        let storyboard = UIStoryboard(name: "PersonInformation", bundle: nil)
+        let pushVC = storyboard.instantiateViewController(withIdentifier: "CPersonInformationViewController")
+        let navVC = UINavigationController(rootViewController:pushVC)
+        navVC.modalPresentationStyle = .overFullScreen
+        self.present(navVC, animated: true, completion:nil)
+    }
+    
+    @IBAction func googleLoginButtonTouched(_ sender: GIDSignInButton) {
+        // 구글 인증
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        let config = GIDConfiguration(clientID: clientID)
+        
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { user, error in
+            guard error == nil else { return }
+                        
+            // 인증을 해도 계정은 따로 등록을 해주어야 한다.
+            // 구글 인증 토큰 받아서 -> 사용자 정보 토큰 생성 -> 파이어베이스 인증에 등록
+            guard
+                let authentication = user?.authentication,
+                let idToken = authentication.idToken
+            else {
+                return
+            }
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                           accessToken: authentication.accessToken)
+            
+            // 사용자 정보 등록
+            Auth.auth().signIn(with: credential) { _, _ in
+                // 사용자 등록 후에 처리할 코드
+                guard let email = Auth.auth().currentUser?.email else {return}
+                guard let displayName = Auth.auth().currentUser?.displayName else {return}
+                
+//                guard let user = result?.user else { return } // 파이어베이스 유저 객체를 가져옴
+                
+                self.userNameLabel.text = displayName
+                self.userEmailLabel.text = email
+                
+                
+                guard let userAuth = Auth.auth().currentUser else { return }
+                // 전달할 데이터
+                let data = ["email": "JTestEmail@gmail.com",
+                            "age": "42",
+                            "fullName": "Jason2 wonku ji"
+                ]
+                
+                // 가입에 성공하면 그 유저의 uid를 파이어베이스가 생성해준다.
+                // 그렇기 때문에 이 uid를 기준으로 특정한 유저 데이터를 저장해야 한다.
+                self.db.collection("users").document(userAuth.uid).setData(data) { error in
+                    if let error = error {
+                        print("DEBUG: \(error.localizedDescription)")
+                        return
+                    }
+                    UserDefaults.standard.set(true, forKey: "isSignIn")
+                    NotificationCenter.default.post(name: .authStateDidChange, object: nil)
+                    self.navigationController?.dismiss(animated: true, completion: nil)
+                    
+                }
+                // If sign in succeeded, display the app's main content View.
+            }
+        }
+    }
 
+    @IBAction func googleLogout(_ sender: Any) {
+        
+    }
+    
     private func registerAuthStateDidChangeEvent() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(checkLoginIn),
@@ -84,64 +131,13 @@ class PersonViewController : UIViewController
         }
     }
     
-    private func setHome() {
-        
-        self.logInButton.setTitle("LogOut", for: .normal)
-        self.isLogged = true
-        
-        self.nameTextField.isEnabled = true
-        self.emailTextField.isEnabled = true
-        self.ageTextField.isEnabled = true
-        self.updateButton.isEnabled = true
-        
-        guard let userAuth = Auth.auth().currentUser else { return }
-        
-        
-        
-//        Firestore.firestore().collection("user").document(userAuth.uid).getDocument { snapshot, error in
-//            guard let userData = try? snapshot?.data(as: User.self) else { return } // 매핑(FirebaseFirestoreSwift 라이브러리를 추가해야 사용가능)
-//            
-//            self.currentUser = userData
-//        }
-//        
-//        Firestore.firestore().collection("user").getDocuments { snapshot, error in
-//                if let error = error {
-//                    print("DEBUG: \(error.localizedDescription)")
-//                    return
-//                }
-//
-//                guard let documents = snapshot?.documents else { return } // document들을 가져옴
-//
-//                let users = documents.compactMap( { try? $0.data(as: User.self) }) // User 구조체로 전부 매핑
-//            }
-//        }
-        
-//        if let profiledata = userAuth.profile {
-//
-//            let userId : String = userAuth.userID ?? ""
-//            let givenName : String = profiledata.givenName ?? ""
-//            let familyName : String = profiledata.familyName ?? ""
-//            let email : String = profiledata.email
-//
-//            if let imgurl = userAuth.profile?.imageURL(withDimension: 100) {
-//                let absoluteurl : String = imgurl.absoluteString
-//                //HERE CALL YOUR SERVER API
-//            }
-//        }
-        
-        didTapLoadImageFromFirebaseButton()
-        
-    }
-    
     @IBAction func loginButtonTouched(_ sender: Any) {
         routeToLogin()
     }
     
-    @objc func viewTapped(_ sender: UITapGestureRecognizer) {
-        print("\(sender.view!.tag) 클릭됨")
-        
-        present(imagePicker, animated: true)
-                
+    private func setHome() {
+        self.googleLogout.isHidden = false
+        guard let userAuth = Auth.auth().currentUser else { return }
     }
     
     private func routeToLogin() {
@@ -151,74 +147,63 @@ class PersonViewController : UIViewController
         navVC.modalPresentationStyle = .overFullScreen
         self.present(navVC, animated: true, completion:nil)
     }
-    
-    @objc private func didTapLoadImageFromFirebaseButton() {
-        guard let urlString = UserDefaults.standard.string(forKey: "imageURL") else { return }
-        
-        FirebaseStorageManager.downloadImage(urlString: urlString) { [weak self] image in
-            self?.profileImage.image = image
-        }
-    }
+
 }
 
-extension PersonViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
-              let user = Auth.auth().currentUser else { return }
+/*
+extension PersonViewController : GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        // handle login
+
+        if let authenication = user.authentication {
+            print("google sign in \(authenication.idToken)")
+            logInButton.isHidden = true
+            
+        }
         
-        FirebaseStorageManager.uploadImage(image: selectedImage, pathRoot: user.uid) { url in
-            if let url = url {
-                UserDefaults.standard.set(url.absoluteString, forKey: "imageURL")
-                
-                guard let userAuth = Auth.auth().currentUser else { return }
-                // 전달할 데이터
-                let data = ["email": "JTestEmail@gmail.com",
-                            "age": "40",
-                            "fullName": "Jason2 wonku ji",
-                            "imageURL" : url.absoluteString
-                ]
-                
-                Firestore.firestore().collection("users").document(userAuth.uid).setData(data) { error in
-                    if let error = error {
-                        print("DEBUG: \(error.localizedDescription)")
-                        return
-                    }
+        guard error == nil else { return }
+        
+        // 인증을 해도 계정은 따로 등록을 해주어야 한다.
+        // 구글 인증 토큰 받아서 -> 사용자 정보 토큰 생성 -> 파이어베이스 인증에 등록
+        guard
+            let authentication = user?.authentication,
+            let idToken = authentication.idToken
+        else {
+            return
+        }
+        let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                       accessToken: authentication.accessToken)
+        
+        // 사용자 정보 등록
+        Auth.auth().signIn(with: credential) { _, _ in
+            // 사용자 등록 후에 처리할 코드
+            //                guard let email = Auth.auth().currentUser?.email else {return}
+            
+            //                guard let user = result?.user else { return } // 파이어베이스 유저 객체를 가져옴
+            
+            
+            guard let userAuth = Auth.auth().currentUser else { return }
+            // 전달할 데이터
+            let data = ["email": "JTestEmail@gmail.com",
+                        "age": "40",
+                        "fullName": "Jason2 wonku ji"
+            ]
+            
+            // 가입에 성공하면 그 유저의 uid를 파이어베이스가 생성해준다.
+            // 그렇기 때문에 이 uid를 기준으로 특정한 유저 데이터를 저장해야 한다.
+            self.db.collection("users").document(userAuth.uid).setData(data) { error in
+                if let error = error {
+                    print("DEBUG: \(error.localizedDescription)")
+                    return
                 }
                 
-                self.didTapLoadImageFromFirebaseButton()
+                UserDefaults.standard.set(true, forKey: "isSignIn")
+                NotificationCenter.default.post(name: .authStateDidChange, object: nil)
+                self.navigationController?.dismiss(animated: true, completion: nil)
+                
             }
+            // If sign in succeeded, display the app's main content View.
         }
-        
-        picker.dismiss(animated: true)                
     }
 }
-
-
-//extension PersonViewController : UITableViewDelegate
-//{
-////    // MARK: UITableViewDelegate delegate
-////    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-////        <#code#>
-////    }
-//
-//}
-//
-//
-//extension PersonViewController : UITableViewDataSource
-//{
-//    
-//    // MARK: UITableViewDataSource delegate
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1;
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = personTableView.dequeueReusableCell(withIdentifier: "PersonTableViewCell", for: indexPath) as! PersonTableViewCell
-//        
-//        
-//        
-//        
-//        return cell
-//    }
-//}
+*/

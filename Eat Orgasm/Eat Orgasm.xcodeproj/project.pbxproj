@@ -11,6 +11,8 @@
 		7FD30988628B446CB1D38323 /* Pods_Eat_Orgasm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D6668C1818A1EB15FCC17B /* Pods_Eat_Orgasm.framework */; };
 		8E06759E283E64B60027F5AC /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E06759D283E64B60027F5AC /* FirebaseStorageManager.swift */; };
 		8E18C0AE282D381400800BEB /* CRegisterAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18C0AD282D381400800BEB /* CRegisterAccountViewController.swift */; };
+		8E57023D2868A5D20053E4D4 /* PersonInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E57023C2868A5D20053E4D4 /* PersonInformation.storyboard */; };
+		8E5702452868A5FE0053E4D4 /* CPersonInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5702442868A5FE0053E4D4 /* CPersonInformationViewController.swift */; };
 		8E622461283676840036ED43 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E622460283676840036ED43 /* Notification.swift */; };
 		8E751F32281D6466007EE6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F31281D6466007EE6F3 /* AppDelegate.swift */; };
 		8E751F34281D6466007EE6F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F33281D6466007EE6F3 /* SceneDelegate.swift */; };
@@ -56,6 +58,8 @@
 		805EC304DC0615DD8AF19042 /* Pods_Eat_OrgasmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eat_OrgasmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E06759D283E64B60027F5AC /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
 		8E18C0AD282D381400800BEB /* CRegisterAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRegisterAccountViewController.swift; sourceTree = "<group>"; };
+		8E57023C2868A5D20053E4D4 /* PersonInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonInformation.storyboard; sourceTree = "<group>"; };
+		8E5702442868A5FE0053E4D4 /* CPersonInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPersonInformationViewController.swift; sourceTree = "<group>"; };
 		8E622460283676840036ED43 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		8E751F2E281D6466007EE6F3 /* Eat Orgasm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eat Orgasm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E751F31281D6466007EE6F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 				8EDF33C0282BDE96009F0904 /* CLogInViewController.swift */,
 				8E18C0AD282D381400800BEB /* CRegisterAccountViewController.swift */,
 				8E751F6E281D70F0007EE6F3 /* PersonTableViewCell.swift */,
+				8E5702442868A5FE0053E4D4 /* CPersonInformationViewController.swift */,
 				8E751F3A281D646C007EE6F3 /* Assets.xcassets */,
 				8E751F3F281D646C007EE6F3 /* Info.plist */,
 			);
@@ -215,6 +220,7 @@
 				8E751F64281D6D74007EE6F3 /* PersonTableViewCell.xib */,
 				8E751F3C281D646C007EE6F3 /* LaunchScreen.storyboard */,
 				8EDF33A2282BDB0A009F0904 /* LogIn.storyboard */,
+				8E57023C2868A5D20053E4D4 /* PersonInformation.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				A68DB0D5282B42B700A3153F /* GoogleService-Info.plist in Resources */,
 				8E751F65281D6D74007EE6F3 /* PersonTableViewCell.xib in Resources */,
 				8EDF33A3282BDB0A009F0904 /* LogIn.storyboard in Resources */,
+				8E57023D2868A5D20053E4D4 /* PersonInformation.storyboard in Resources */,
 				8E751F39281D6466007EE6F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5702452868A5FE0053E4D4 /* CPersonInformationViewController.swift in Sources */,
 				8E751F36281D6466007EE6F3 /* ViewController.swift in Sources */,
 				8E751F32281D6466007EE6F3 /* AppDelegate.swift in Sources */,
 				8EDF33C1282BDE96009F0904 /* CLogInViewController.swift in Sources */,
