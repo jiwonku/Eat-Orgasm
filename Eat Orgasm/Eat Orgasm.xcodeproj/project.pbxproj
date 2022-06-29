@@ -14,6 +14,9 @@
 		8E57023D2868A5D20053E4D4 /* PersonInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E57023C2868A5D20053E4D4 /* PersonInformation.storyboard */; };
 		8E5702452868A5FE0053E4D4 /* CPersonInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5702442868A5FE0053E4D4 /* CPersonInformationViewController.swift */; };
 		8E622461283676840036ED43 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E622460283676840036ED43 /* Notification.swift */; };
+		8E63191C286C9468006689C2 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E63191B286C9468006689C2 /* TimelineTableViewController.swift */; };
+		8E631921286C948A006689C2 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E631920286C9489006689C2 /* TimelineTableViewCell.swift */; };
+		8E631926286C94AB006689C2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E631925286C94AB006689C2 /* Data.swift */; };
 		8E751F32281D6466007EE6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F31281D6466007EE6F3 /* AppDelegate.swift */; };
 		8E751F34281D6466007EE6F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F33281D6466007EE6F3 /* SceneDelegate.swift */; };
 		8E751F36281D6466007EE6F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751F35281D6466007EE6F3 /* ViewController.swift */; };
@@ -61,6 +64,9 @@
 		8E57023C2868A5D20053E4D4 /* PersonInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonInformation.storyboard; sourceTree = "<group>"; };
 		8E5702442868A5FE0053E4D4 /* CPersonInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPersonInformationViewController.swift; sourceTree = "<group>"; };
 		8E622460283676840036ED43 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		8E63191B286C9468006689C2 /* TimelineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
+		8E631920286C9489006689C2 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
+		8E631925286C94AB006689C2 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		8E751F2E281D6466007EE6F3 /* Eat Orgasm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eat Orgasm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E751F31281D6466007EE6F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E751F33281D6466007EE6F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +187,9 @@
 				8E62245F283676680036ED43 /* Extension */,
 				8EDF33A7282BDB15009F0904 /* StoryBoard */,
 				A68DB0D4282B42B600A3153F /* GoogleService-Info.plist */,
+				8E63191B286C9468006689C2 /* TimelineTableViewController.swift */,
+				8E631920286C9489006689C2 /* TimelineTableViewCell.swift */,
+				8E631925286C94AB006689C2 /* Data.swift */,
 				8E751F31281D6466007EE6F3 /* AppDelegate.swift */,
 				8E751F33281D6466007EE6F3 /* SceneDelegate.swift */,
 				8E751F35281D6466007EE6F3 /* ViewController.swift */,
@@ -471,9 +480,12 @@
 				8E751F36281D6466007EE6F3 /* ViewController.swift in Sources */,
 				8E751F32281D6466007EE6F3 /* AppDelegate.swift in Sources */,
 				8EDF33C1282BDE96009F0904 /* CLogInViewController.swift in Sources */,
+				8E631921286C948A006689C2 /* TimelineTableViewCell.swift in Sources */,
 				8E751F34281D6466007EE6F3 /* SceneDelegate.swift in Sources */,
 				8E06759E283E64B60027F5AC /* FirebaseStorageManager.swift in Sources */,
 				8E622461283676840036ED43 /* Notification.swift in Sources */,
+				8E631926286C94AB006689C2 /* Data.swift in Sources */,
+				8E63191C286C9468006689C2 /* TimelineTableViewController.swift in Sources */,
 				8E751F6F281D70F0007EE6F3 /* PersonTableViewCell.swift in Sources */,
 				8E751F6A281D6E79007EE6F3 /* PersonViewController.swift in Sources */,
 				8E18C0AE282D381400800BEB /* CRegisterAccountViewController.swift in Sources */,
